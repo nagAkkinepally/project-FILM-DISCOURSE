@@ -1,309 +1,53 @@
-2026-03-17 09:58:01 [main] INFO  c.f.FilmDiscourseApplication - Starting FilmDiscourseApplication using Java 25.0.2 with PID 6604 (C:\Users\nagas\FILMDISCOURSE\backend\target\classes started by nagas in C:\Users\nagas\FILMDISCOURSE\backend)
-2026-03-17 09:58:01 [main] DEBUG c.f.FilmDiscourseApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
-2026-03-17 09:58:01 [main] INFO  c.f.FilmDiscourseApplication - The following 1 profile is active: "dev"
-2026-03-17 09:58:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-17 09:58:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-17 09:58:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 374 ms. Found 5 JPA repository interfaces.
-2026-03-17 09:58:07 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-03-17 09:58:07 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-03-17 09:58:07 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-03-17 09:58:07 [main] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
-2026-03-17 09:58:07 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5659 ms
-2026-03-17 09:58:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - FilmDiscourseHikariPool - Starting...
-2026-03-17 09:58:08 [main] INFO  com.zaxxer.hikari.pool.HikariPool - FilmDiscourseHikariPool - Added connection conn0: url=jdbc:h2:mem:filmdiscourse user=SA
-2026-03-17 09:58:08 [main] INFO  com.zaxxer.hikari.HikariDataSource - FilmDiscourseHikariPool - Start completed.
-2026-03-17 09:58:08 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:filmdiscourse'
-2026-03-17 09:58:09 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-17 09:58:09 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-03-17 09:58:09 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-03-17 09:58:10 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-17 09:58:10 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
-2026-03-17 09:58:10 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-03-17 09:58:13 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-17 09:58:16 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-17 09:58:17 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-17 09:58:18 [main] DEBUG c.f.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
-2026-03-17 09:58:18 [main] DEBUG c.f.config.RateLimitFilter - Filter 'rateLimitFilter' configured for use
-2026-03-17 09:58:20 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-17 09:58:21 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
-2026-03-17 09:58:23 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
-2026-03-17 09:58:23 [main] INFO  c.f.FilmDiscourseApplication - Started FilmDiscourseApplication in 22.899 seconds (process running for 23.8)
-2026-03-17 09:58:24 [main] INFO  c.f.s.DataInitializationService - Created role: ROLE_USER
-2026-03-17 09:58:24 [main] INFO  c.f.s.DataInitializationService - Created role: ROLE_ADMIN
-2026-03-17 09:58:24 [main] INFO  c.f.s.DataInitializationService - Created role: ROLE_MODERATOR
-2026-03-17 09:58:25 [main] INFO  c.f.s.DataInitializationService - Admin user created. Username: admin | Password: Admin@1234
-2026-03-17 10:01:54 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-17 10:01:54 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-03-17 10:01:54 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
-2026-03-17 10:02:54 [http-nio-8080-exec-8] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 1587 ms
-2026-03-17 10:05:16 [http-nio-8080-exec-3] INFO  c.filmdiscourse.service.AuthService - User logged in: admin
-2026-03-17 10:05:17 [http-nio-8080-exec-5] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:05:17 [http-nio-8080-exec-4] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:05:17 [http-nio-8080-exec-6] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:05:17 [http-nio-8080-exec-1] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:05:50 [http-nio-8080-exec-7] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:05:50 [http-nio-8080-exec-8] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:06:51 [http-nio-8080-exec-10] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:06:51 [http-nio-8080-exec-9] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:06:51 [http-nio-8080-exec-2] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:09:11 [http-nio-8080-exec-4] ERROR c.f.exception.GlobalExceptionHandler - Unexpected error occurred: 
-org.springframework.data.mapping.PropertyReferenceException: No property 'string' found for type 'Movie'
-	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:90)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:443)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:419)
-	at org.springframework.data.mapping.PropertyPath.lambda$from$0(PropertyPath.java:372)
-	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
-	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:354)
-	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:332)
-	at org.springframework.data.jpa.repository.query.QueryUtils.toJpaOrder(QueryUtils.java:751)
-	at org.springframework.data.jpa.repository.query.QueryUtils.toOrders(QueryUtils.java:704)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:753)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:710)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:447)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:426)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220)
-	at jdk.proxy2/jdk.proxy2.$Proxy181.findAll(Unknown Source)
-	at com.filmdiscourse.service.MovieService.getAllMovies(MovieService.java:60)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
-	at org.springframework.cache.interceptor.CacheInterceptor.lambda$invoke$0(CacheInterceptor.java:64)
-	at org.springframework.cache.interceptor.CacheAspectSupport.invokeOperation(CacheAspectSupport.java:416)
-	at org.springframework.cache.interceptor.CacheAspectSupport.evaluate(CacheAspectSupport.java:545)
-	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:433)
-	at org.springframework.cache.interceptor.CacheAspectSupport.execute(CacheAspectSupport.java:395)
-	at org.springframework.cache.interceptor.CacheInterceptor.invoke(CacheInterceptor.java:74)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
-	at com.filmdiscourse.service.MovieService$$SpringCGLIB$$0.getAllMovies(<generated>)
-	at com.filmdiscourse.controller.MovieController.getAllMovies(MovieController.java:48)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:351)
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
-	at com.filmdiscourse.controller.MovieController$$SpringCGLIB$$0.getAllMovies(<generated>)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:259)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:192)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:920)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:830)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at com.filmdiscourse.config.RateLimitFilter.doFilterInternal(RateLimitFilter.java:49)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)
-	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
-	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
-	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
-	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at com.filmdiscourse.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:39)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
-	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
-	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
-	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
-	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)
-	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)
-	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)
-	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-2026-03-17 10:18:51 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-03-17 10:18:51 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - FilmDiscourseHikariPool - Shutdown initiated...
-2026-03-17 10:18:51 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - FilmDiscourseHikariPool - Shutdown completed.
-2026-03-17 10:19:15 [main] INFO  c.f.FilmDiscourseApplication - Starting FilmDiscourseApplication using Java 25.0.2 with PID 16848 (C:\Users\nagas\FILMDISCOURSE\backend\target\classes started by nagas in C:\Users\nagas\FILMDISCOURSE\backend)
-2026-03-17 10:19:15 [main] DEBUG c.f.FilmDiscourseApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
-2026-03-17 10:19:15 [main] INFO  c.f.FilmDiscourseApplication - The following 1 profile is active: "dev"
-2026-03-17 10:19:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-17 10:19:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-17 10:19:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 385 ms. Found 5 JPA repository interfaces.
-2026-03-17 10:19:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
-2026-03-17 10:19:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-03-17 10:19:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.filmdiscourse.repository.EditHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-17 10:19:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.filmdiscourse.repository.MovieRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-17 10:19:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.filmdiscourse.repository.ReviewRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-17 10:19:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.filmdiscourse.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-17 10:19:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.filmdiscourse.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2026-03-17 10:19:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 0 Redis repository interfaces.
-2026-03-17 10:19:21 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2026-03-17 10:19:21 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-03-17 10:19:21 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
-2026-03-17 10:19:21 [main] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
-2026-03-17 10:19:21 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5810 ms
-2026-03-17 10:19:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - FilmDiscourseHikariPool - Starting...
-2026-03-17 10:19:22 [main] INFO  com.zaxxer.hikari.pool.HikariPool - FilmDiscourseHikariPool - Added connection conn0: url=jdbc:h2:mem:filmdiscourse user=SA
-2026-03-17 10:19:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - FilmDiscourseHikariPool - Start completed.
-2026-03-17 10:19:22 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:filmdiscourse'
-2026-03-17 10:19:22 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-17 10:19:23 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-03-17 10:19:23 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2026-03-17 10:19:23 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-17 10:19:24 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
-2026-03-17 10:19:24 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-03-17 10:19:27 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-17 10:19:27 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-17 10:19:28 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-03-17 10:19:29 [main] DEBUG c.f.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
-2026-03-17 10:19:29 [main] DEBUG c.f.config.RateLimitFilter - Filter 'rateLimitFilter' configured for use
-2026-03-17 10:19:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-17 10:19:33 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
-2026-03-17 10:19:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
-2026-03-17 10:19:35 [main] INFO  c.f.FilmDiscourseApplication - Started FilmDiscourseApplication in 21.29 seconds (process running for 22.205)
-2026-03-17 10:19:36 [main] INFO  c.f.s.DataInitializationService - Created role: ROLE_USER
-2026-03-17 10:19:36 [main] INFO  c.f.s.DataInitializationService - Created role: ROLE_ADMIN
-2026-03-17 10:19:36 [main] INFO  c.f.s.DataInitializationService - Created role: ROLE_MODERATOR
-2026-03-17 10:19:37 [main] INFO  c.f.s.DataInitializationService - Admin user created. Username: admin | Password: Admin@1234
-2026-03-17 10:20:03 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-03-17 10:20:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-03-17 10:20:03 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2026-03-17 10:20:04 [boundedElastic-1] WARN  o.s.b.a.d.r.RedisReactiveHealthIndicator - Redis health check failed
+2026-03-31 09:42:38 [main] INFO  c.f.FilmDiscourseApplication - Starting FilmDiscourseApplication using Java 25.0.2 with PID 8228 (C:\Users\nagas\FILMDISCOURSE\backend\target\classes started by nagas in C:\Users\nagas\FILMDISCOURSE\backend)
+2026-03-31 09:42:38 [main] DEBUG c.f.FilmDiscourseApplication - Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-31 09:42:38 [main] INFO  c.f.FilmDiscourseApplication - The following 1 profile is active: "dev"
+2026-03-31 09:42:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-31 09:42:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-31 09:42:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 514 ms. Found 5 JPA repository interfaces.
+2026-03-31 09:42:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-31 09:42:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-31 09:42:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.filmdiscourse.repository.EditHistoryRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-31 09:42:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.filmdiscourse.repository.MovieRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-31 09:42:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.filmdiscourse.repository.ReviewRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-31 09:42:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.filmdiscourse.repository.RoleRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-31 09:42:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.filmdiscourse.repository.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-03-31 09:42:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 Redis repository interfaces.
+2026-03-31 09:42:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-31 09:42:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-31 09:42:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-03-31 09:42:43 [main] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring embedded WebApplicationContext
+2026-03-31 09:42:43 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5561 ms
+2026-03-31 09:42:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - FilmDiscourseHikariPool - Starting...
+2026-03-31 09:42:44 [main] INFO  com.zaxxer.hikari.pool.HikariPool - FilmDiscourseHikariPool - Added connection conn0: url=jdbc:h2:mem:filmdiscourse user=SA
+2026-03-31 09:42:44 [main] INFO  com.zaxxer.hikari.HikariDataSource - FilmDiscourseHikariPool - Start completed.
+2026-03-31 09:42:44 [main] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:filmdiscourse'
+2026-03-31 09:42:45 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-31 09:42:45 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-31 09:42:45 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-03-31 09:42:46 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-31 09:42:46 [main] WARN  org.hibernate.dialect.Dialect - HHH000511: The 2.2.0 version for [org.hibernate.dialect.PostgreSQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 12.0.0. Check the community dialects project for available legacy versions.
+2026-03-31 09:42:46 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-31 09:42:48 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-31 09:42:48 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-31 09:42:49 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-31 09:42:50 [main] DEBUG c.f.security.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2026-03-31 09:42:50 [main] DEBUG c.f.config.RateLimitFilter - Filter 'rateLimitFilter' configured for use
+2026-03-31 09:42:52 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-31 09:42:53 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2026-03-31 09:42:55 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/api'
+2026-03-31 09:42:55 [main] INFO  c.f.FilmDiscourseApplication - Started FilmDiscourseApplication in 18.983 seconds (process running for 19.977)
+2026-03-31 09:42:56 [main] INFO  c.f.s.DataInitializationService - Created role: ROLE_USER
+2026-03-31 09:42:56 [main] INFO  c.f.s.DataInitializationService - Created role: ROLE_ADMIN
+2026-03-31 09:42:56 [main] INFO  c.f.s.DataInitializationService - Created role: ROLE_MODERATOR
+2026-03-31 09:42:57 [main] INFO  c.f.s.DataInitializationService - Admin user created. Username: admin | Password: Admin@1234
+2026-03-31 09:44:22 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[localhost].[/api] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-31 09:44:22 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-31 09:44:22 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2026-03-31 09:44:22 [http-nio-8080-exec-1] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1121946804 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:14:22.804Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 09:44:22 [http-nio-8080-exec-2] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1121946804 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:14:22.804Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 09:44:23 [http-nio-8080-exec-4] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1121947260 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:14:23.260Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 09:44:23 [http-nio-8080-exec-3] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1121947260 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:14:23.260Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 09:44:28 [boundedElastic-1] WARN  o.s.b.a.d.r.RedisReactiveHealthIndicator - Redis health check failed
 org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
 	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1795)
 	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1726)
@@ -348,7 +92,11 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-2026-03-17 10:20:34 [boundedElastic-1] WARN  o.s.b.a.d.r.RedisReactiveHealthIndicator - Redis health check failed
+2026-03-31 09:44:34 [http-nio-8080-exec-7] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1121958504 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:14:34.504Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 09:44:34 [http-nio-8080-exec-8] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1121958513 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:14:34.513Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 09:44:34 [http-nio-8080-exec-9] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1121958546 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:14:34.546Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 09:44:34 [http-nio-8080-exec-10] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1121958550 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:14:34.550Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 09:44:46 [boundedElastic-1] WARN  o.s.b.a.d.r.RedisReactiveHealthIndicator - Redis health check failed
 org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
 	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1795)
 	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1726)
@@ -393,36 +141,14 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-2026-03-17 10:21:56 [http-nio-8080-exec-6] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:21:56 [http-nio-8080-exec-3] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:21:56 [http-nio-8080-exec-7] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:02 [http-nio-8080-exec-9] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:02 [http-nio-8080-exec-8] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:03 [http-nio-8080-exec-10] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:03 [http-nio-8080-exec-4] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:07 [http-nio-8080-exec-5] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:07 [http-nio-8080-exec-1] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:14 [http-nio-8080-exec-2] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:14 [http-nio-8080-exec-6] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:14 [http-nio-8080-exec-7] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:14 [http-nio-8080-exec-3] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:44 [http-nio-8080-exec-9] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:45 [http-nio-8080-exec-8] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:45 [http-nio-8080-exec-10] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:48 [http-nio-8080-exec-4] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:48 [http-nio-8080-exec-5] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:57 [http-nio-8080-exec-6] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:57 [http-nio-8080-exec-1] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:57 [http-nio-8080-exec-7] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:22:57 [http-nio-8080-exec-2] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:23:21 [http-nio-8080-exec-3] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:23:21 [http-nio-8080-exec-9] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:23:21 [http-nio-8080-exec-8] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:23:23 [http-nio-8080-exec-10] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:23:23 [http-nio-8080-exec-4] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:23:26 [http-nio-8080-exec-5] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:23:26 [http-nio-8080-exec-1] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:23:28 [http-nio-8080-exec-2] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:23:28 [http-nio-8080-exec-6] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:23:28 [http-nio-8080-exec-7] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
-2026-03-17 10:23:28 [http-nio-8080-exec-3] DEBUG c.f.security.JwtAuthenticationFilter - Authenticated user: admin
+2026-03-31 09:45:26 [http-nio-8080-exec-2] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1122010074 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:15:26.074Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 09:45:26 [http-nio-8080-exec-4] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1122010074 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:15:26.074Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 09:45:26 [http-nio-8080-exec-3] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1122010114 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:15:26.114Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 09:45:26 [http-nio-8080-exec-5] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1122010114 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T04:15:26.114Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 10:35:24 [http-nio-8080-exec-7] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1125008772 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T05:05:24.772Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 10:35:24 [http-nio-8080-exec-8] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1125008980 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T05:05:24.980Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 10:35:24 [http-nio-8080-exec-9] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1125008985 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T05:05:24.985Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 10:35:26 [http-nio-8080-exec-10] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1125010161 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T05:05:26.161Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 10:35:26 [http-nio-8080-exec-1] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1125010272 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T05:05:26.272Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 10:35:29 [http-nio-8080-exec-2] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1125013735 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T05:05:29.735Z. Allowed clock skew: 0 milliseconds.
+2026-03-31 10:35:29 [http-nio-8080-exec-4] ERROR c.f.security.JwtAuthenticationFilter - Cannot set user authentication: JWT expired 1125013865 milliseconds ago at 2026-03-18T04:35:16.000Z. Current time: 2026-03-31T05:05:29.865Z. Allowed clock skew: 0 milliseconds.
